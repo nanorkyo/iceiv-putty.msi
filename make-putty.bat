@@ -1,5 +1,5 @@
 @SET PROJNAME=putty-gdi
-@SET REVISION=20150228
+@SET REVISION=20150816
 
 @SET CANDLE="%WIX%bin\candle.exe"
 @SET LIGHT="%WIX%bin\light.exe"

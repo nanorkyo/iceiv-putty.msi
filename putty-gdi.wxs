@@ -6,7 +6,7 @@
     candleArgs: "<projectfile>" -out "<projectname>.wixobj" -fips <extensions>
     lightArgs: "<projectname>.wixobj" -out "<projectname>.msi" <extensions> -cultures:ja-jp
 -->
-<?define SourceDir      = "putty-gdi-20150228" ?>
+<?define SourceDir      = "putty-gdi-20150816" ?>
 <?define ProductVersion = "0.64.0" ?>
 <?if $(sys.BUILDARCH) = "x86" ?>
    <?define ExeSourceDir    = "$(var.SourceDir)" ?>
@@ -23,8 +23,8 @@
 <?define UpgradeCode = "E428B75E-803A-4F59-ACCE-9CFDC890D806" ?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
      xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
-    <Product Id="$(var.ProductId)" Name="PuTTY 0.64+ICE IV" Version="$(var.ProductVersion)" Manufacturer="Simon Tatham and ICE" Language="1041" Codepage="932" UpgradeCode="$(var.UpgradeCode)">
-        <Package Description="PuTTY 0.64 をベースとして、 PuTTY 0.60 ごった煮版 2007年8月6日版 に諸々の機能を追加しました。" Comments="ICE IV+PuTTYインストーラ" InstallerVersion="300" Compressed="yes" SummaryCodepage="932" />
+    <Product Id="$(var.ProductId)" Name="PuTTY 0.65+ICE IV" Version="$(var.ProductVersion)" Manufacturer="Simon Tatham and ICE" Language="1041" Codepage="932" UpgradeCode="$(var.UpgradeCode)">
+        <Package Description="PuTTY 0.65 をベースとして、 PuTTY 0.60 ごった煮版 2007年8月6日版 に諸々の機能を追加しました。" Comments="ICE IV+PuTTYインストーラ" InstallerVersion="300" Compressed="yes" SummaryCodepage="932" />
         <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="$(var.ProgramFilesDir)" Name="Program Files">
